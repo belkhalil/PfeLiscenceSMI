@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>دراسة إحصائية للأصوات العربية</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+		<script type="text/javascript" src="js/jquery-1.6.js" ></script>
+		<script type="text/javascript" src="js/cufon-replace.js"></script> 
+		<script type="text/javascript" src="js/PT_Sans_400.font.js"></script>
+		<script type="text/javascript" src="js/tms-0.3.js"></script>
+		<script type="text/javascript" src="js/tms_presets.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/atooltip.jquery.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+    <div id="header">
+	<img src="style/tab_selected.png"  />
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1 style="font-family:'Tahoma';font-size:40px"><a href="index.html"><span class="logo_colour">دراسة إحصائية </span></a>للأصوات العربية</h1>
+        </div>
+		
+      </div>
+      <div id="menubar">
+        <ul id="menu" style="font-family:'Tahoma'">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="faq.html">أسئلة مترددة</a></li>
+          <li   class="selected"><a href="etude.html">دراسة النص</a></li>
+          <li><a href="qui.html">عن الموقع</a></li>
+          <li><a href="new.html">الرئيسية</a></li>
+        </ul>
+		</div>
+		</div>
+		<textarea name="normal" id="output" placeholder="اكتب النص"  required ></textarea>
+		<input type="file" id="files" name="file" /> 
+		<script>
+    function handleFileSelect(evt) {
+        var files = document.getElementById('files').files;
+        if (!files.length) {
+          alert('! المرجو اختيار الملف ');
+          return;
+        }
+        var file = files[0];
+        var reader = new FileReader();
+        reader.onloadend = function(evt) {
+            if (evt.target.readyState == FileReader.DONE) { 
+                document.getElementById('output').textContent = evt.target.result;
+            }  
+        };
+        reader.readAsText(file, "UTF-8");
+    }
+
+
+document.getElementById('files').addEventListener('change', handleFileSelect, true);
+</script>
+<form method="post" action="Traitement">
+		
+		<textarea name="aerodique" id="arabtext" style="top:120%;" placeholder="اكتبه كتابة عروضية" required oninvalid="this.setCustomValidity(\'كتابة النص كتابة عروضية إجباري\')"></textarea>
+		
+				<input type="file" id="files1" name="file1" style="position:absolute;top:180%;left:60%;width:30%"/> 
+		<script>
+    function handleFileSelect(evt) {
+        var files = document.getElementById('files1').files;
+        if (!files.length) {
+          alert('! المرجو اختيار الملف ');
+          return;
+        }
+        var file = files[0];
+        var reader = new FileReader();
+        reader.onloadend = function(evt) {
+            if (evt.target.readyState == FileReader.DONE) { 
+                document.getElementById('arabtext').textContent = evt.target.result;
+            }  
+        };
+        reader.readAsText(file, "UTF-8");
+    }
+
+
+document.getElementById('files1').addEventListener('change', handleFileSelect, false);
+</script>
+		<input type="submit"  name="btn" value="entrer"/>
+        </form>	
+		
+<div ><img src="images/bord1.JPG" style="position:fixed;width:15%;left:0;top:0;height:100%" /></div>
+<div ><img src="images/bord1.JPG" style="position:fixed;width:15%;right:0;top:0;height:100%" /></div>
+
+		    <div id="content_footer" ></div>
+    <div id="footer">
+   <p style="font-family:'Tahoma'"><a href="new.html">الرئيسية</a> | <a href="qui.html">عن الموقع</a> | <a href="etude.html">دراسة النص</a> | <a href="faq.html">أسئلة مترددة</a></p>
+      <p style="font-family:'Tahoma';font-size:12px">جميع الحقوق محفوظة &copy; دراسة إحصائية للأصوات العربية | <a href="http://www.univh2m.ac.ma/" target="_blanc" >جامعة الحسن التاني ،كلية العلوم ابن امسيك</a> | شعبة الرياضيات و الإعلاميات| الدار البيضاء</a></p>
+    </div>
+		</div>
+		</body>

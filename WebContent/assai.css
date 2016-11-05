@@ -1,0 +1,67 @@
+@CHARSET "ISO-8859-1";
+.tex{
+	
+fill:blue;
+stroke:blue;
+font-size:20px;
+font-family:'Tahoma', Verdana, serif;
+text-anchor:END;
+
+}
+.t_tab{
+	color:blue;
+stroke:blue;
+font-size:30px;
+font-family:'Tahoma', Verdana, serif;
+
+position:absolute;
+ top:50%;
+ left:35%
+}
+.text{fill:blue;
+stroke:blue;
+font-size:13px;
+font-family:'Tahoma', Verdana, serif;
+}
+.put
+{
+	position:absolute;
+	top:45%; 
+	left:20%;
+
+}
+.put1
+{
+	position:absolute;
+	top:45%; 
+	left:30%;
+
+}
+.put2
+{
+	position:absolute;
+	top:45%; 
+	left:40%;
+
+}
+.put3
+{
+	position:absolute;
+	top:45%; 
+	left:50%;
+
+}
+.put4
+{
+	position:absolute;
+	top:45%; 
+	left:60%;
+
+}
+.put5
+{
+	position:absolute;
+	top:45%; 
+	left:70%;
+
+}
